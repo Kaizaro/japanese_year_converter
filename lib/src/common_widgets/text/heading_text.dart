@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:japanese_calendar/src/theme/colors.dart';
 
 enum AppTextSizes {
@@ -11,12 +12,12 @@ double defaultFontSize = 24;
 // double letterSpacing = fontSize * 1.2;
 // double lineHeight = fontSize * 1.3;
 
-class AppTitleText extends StatelessWidget {
+class HeadingText extends StatelessWidget {
   final String title;
   final int? color;
   final AppTextSizes? size;
-  
-  const AppTitleText({Key? key, required this.title, this.color, this.size})
+
+  const HeadingText({Key? key, required this.title, this.color, this.size})
       : super(key: key);
 
   double _getFontSize() {
@@ -44,13 +45,14 @@ class AppTitleText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: TextStyle(
-        fontSize: _getFontSize(),
-        // fontSize: fontSize,
-        fontWeight: FontWeight.bold,
-        // letterSpacing: letterSpacing,
-        // height: lineHeight,
-        color: _getFontColor(),
+      style: GoogleFonts.openSans(
+        textStyle: TextStyle(
+          fontSize: _getFontSize(),
+          fontWeight: FontWeight.w700,
+          // letterSpacing: letterSpacing,
+          // height: lineHeight,
+          color: _getFontColor(),
+        ),
       ),
     );
   }
