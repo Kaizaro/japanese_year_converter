@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:japanese_calendar/src/theme/colors.dart';
 
-double fontSize = 22;
+double fontSize = 18;
 double letterSpacing = fontSize * 1.2;
 double lineHeight = fontSize * 1.3;
 
-class TitleText extends StatelessWidget {
-  const TitleText({Key? key, required this.title}) : super(key: key);
+class SubsectionsTitleText extends StatelessWidget {
+  SubsectionsTitleText({Key? key, required this.title, color}) : super(key: key);
 
   final String title;
-  // final Color _color = Color('');
+  final Color color = Color(AppColors.text);
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +20,7 @@ class TitleText extends StatelessWidget {
         fontWeight: FontWeight.bold,
         letterSpacing: letterSpacing,
         height: lineHeight,
+        color: color,
       ),
     );
   }

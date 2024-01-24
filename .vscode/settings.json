@@ -1,0 +1,60 @@
+{
+  "security.workspace.trust.enabled": false,
+    "[dart]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true
+        },
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": "off",
+    },
+    "dart.warnWhenEditingFilesOutsideWorkspace": false,
+    "dart.renameFilesWithClasses": "prompt",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.formatOnSave": true,
+    "editor.stickyScroll.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.dart": "${capture}.g.dart, ${capture}.freezed.dart"
+    },
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll": true
+  // },
+  // "editor.formatOnSave": true,
+  // "editor.bracketPairColorization.enabled": true,
+  // "dart.previewFlutterUiGuides": true,
+  // "editor.stickyScroll.enabled": true,
+  // "explorer.fileNesting.patterns": {
+  //   "*.dart": "${capture}.g.dart, ${capture}.freezed.dart"
+  // },
+  // "explorer.fileNesting.enabled": true,
+  // "explorer.fileNesting.expand": false
+}
+
+// "security.workspace.trust.enabled": false,
+//     "[dart]": {
+//         "editor.codeActionsOnSave": {
+//             "source.fixAll": true
+//         },
+//         "editor.selectionHighlight": false,
+//         "editor.suggest.snippetsPreventQuickSuggestions": false,
+//         "editor.suggestSelection": "first",
+//         "editor.tabCompletion": "onlySnippets",
+//         "editor.wordBasedSuggestions": false,
+//     },
+//     "dart.warnWhenEditingFilesOutsideWorkspace": false,
+//     "dart.renameFilesWithClasses": "prompt",
+//     "workbench.colorTheme": "Dracula",
+//     "editor.bracketPairColorization.enabled": true,
+//     "editor.inlineSuggest.enabled": true,
+//     "editor.formatOnSave": true,
+//     "editor.stickyScroll.enabled": true,
+//     "explorer.fileNesting.patterns": {
+//         "*.dart": "${capture}.g.dart, ${capture}.freezed.dart"
+//     },
+//     "explorer.fileNesting.enabled": true,
+//     "explorer.fileNesting.expand": false

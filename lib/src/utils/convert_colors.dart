@@ -13,8 +13,10 @@ import 'dart:ui';
 //   return Color(int.parse(hexColor.substring(1, 7), radix: 16) + 0xFF000000);
 // }
 
-String hexToColor(String hexColor) {
-  return '0xFF${hexColor.substring(1, 7)}';
+// int hexToInteger(String Settings (JSONhex) => int.parse(hex, radix: 16);
+
+int hexToColor(String hexColor) {
+  return int.parse('0xFF${hexColor.substring(1, 7)}', radix: 16);
 }
 
 Color hexToColorWithTransparency(String hexColor) {
