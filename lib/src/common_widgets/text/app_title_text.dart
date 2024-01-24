@@ -7,16 +7,17 @@ enum AppTextSizes {
   large,
 }
 
-double fontSize = 24;
+double defaultFontSize = 24;
 // double letterSpacing = fontSize * 1.2;
 // double lineHeight = fontSize * 1.3;
 
 class AppTitleText extends StatelessWidget {
-  AppTitleText({Key? key, required this.title, color, size}) : super(key: key);
-
   final String title;
-  final Color color = Color(AppColors.text);
-  final AppTextSizes size = AppTextSizes.large;
+  final int? color;
+  final AppTextSizes? size;
+  
+  const AppTitleText({Key? key, required this.title, this.color, this.size})
+      : super(key: key);
 
   double _getFontSize() {
     switch (size) {
@@ -25,7 +26,17 @@ class AppTitleText extends StatelessWidget {
       case AppTextSizes.medium:
         return 20;
       case AppTextSizes.large:
-        return 24;
+        return defaultFontSize;
+      default:
+        return defaultFontSize;
+    }
+  }
+
+  Color _getFontColor() {
+    if (color != null) {
+      return Color(color!);
+    } else {
+      return Color(AppColors.text);
     }
   }
 
@@ -35,10 +46,11 @@ class AppTitleText extends StatelessWidget {
       title,
       style: TextStyle(
         fontSize: _getFontSize(),
+        // fontSize: fontSize,
         fontWeight: FontWeight.bold,
         // letterSpacing: letterSpacing,
         // height: lineHeight,
-        color: color,
+        color: _getFontColor(),
       ),
     );
   }
