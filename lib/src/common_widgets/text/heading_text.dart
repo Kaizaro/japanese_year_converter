@@ -13,11 +13,11 @@ double defaultFontSize = 24;
 // double lineHeight = fontSize * 1.3;
 
 class HeadingText extends StatelessWidget {
-  final String title;
+  final String text;
   final int? color;
   final AppTextSizes? size;
 
-  const HeadingText({Key? key, required this.title, this.color, this.size})
+  const HeadingText({Key? key, required this.text, this.color, this.size})
       : super(key: key);
 
   double _getFontSize() {
@@ -44,7 +44,7 @@ class HeadingText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      title,
+      text,
       style: GoogleFonts.openSans(
         textStyle: TextStyle(
           fontSize: _getFontSize(),

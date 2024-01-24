@@ -11,14 +11,14 @@ class InputDateWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const HeadingText(title: 'Japanese Calendar'),
+        title: const HeadingText(text: 'Japanese Calendar'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             BodyText(
-              title: 'Current date: $currentYear',
+              text: 'Current year: $currentYear',
             ),
           ],
         ),

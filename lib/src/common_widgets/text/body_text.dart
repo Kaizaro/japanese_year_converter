@@ -8,11 +8,11 @@ double defaultFontSize = 16;
 // double lineHeight = fontSize * 1.3;
 
 class BodyText extends StatelessWidget {
-  final String title;
+  final String text;
   final int? color;
   final AppTextSizes? size;
 
-  const BodyText({Key? key, required this.title, this.color, this.size})
+  const BodyText({Key? key, required this.text, this.color, this.size})
       : super(key: key);
 
   double _getFontSize() {
@@ -39,7 +39,7 @@ class BodyText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      title,
+      text,
       style: GoogleFonts.roboto(
         textStyle: TextStyle(
           fontSize: _getFontSize(),
