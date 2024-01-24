@@ -14,7 +14,7 @@ import 'dart:ui';
 // }
 
 String hexToColor(String hexColor) {
-  return '0xFF$hexColor';
+  return '0xFF${hexColor.substring(1, 7)}';
 }
 
 Color hexToColorWithTransparency(String hexColor) {
