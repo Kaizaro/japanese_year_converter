@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:japanese_calendar/src/common_widgets/text/body_text.dart';
+import 'package:japanese_calendar/src/features/japanese_to_western_converter/data/japanese_calendar.dart';
+import 'package:japanese_calendar/src/features/japanese_to_western_converter/presentation/utils/get_calendar_names.dart';
 import 'package:japanese_calendar/src/features/japanese_to_western_converter/presentation/widgets/input_date_widget.dart';
 
 void main() {
@@ -59,6 +62,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
+  late Future<JapaneseCalendar> japaneseCalendar;
+
   void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
@@ -71,6 +76,11 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    japaneseCalendar = getCalendarNames();
+  }
+
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
@@ -107,6 +117,8 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            const BodyText(text: 'Here is calendar date'),
+            const BodyText(text: japaneseCalendar[0]),
             const Text(
               'You have pushed the button this many times:',
             ),
