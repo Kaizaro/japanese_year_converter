@@ -2,7 +2,7 @@
   "security.workspace.trust.enabled": false,
     "[dart]": {
         "editor.codeActionsOnSave": {
-            "source.fixAll": true
+          "source.fixAll": "explicit"
         },
         "editor.selectionHighlight": false,
         "editor.suggest.snippetsPreventQuickSuggestions": false,

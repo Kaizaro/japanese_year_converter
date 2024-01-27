@@ -35,8 +35,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: InputDateWidget(),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: const InputDateWidget(),
     );
   }
 }
@@ -118,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const BodyText(text: 'Here is calendar date'),
-            const BodyText(text: japaneseCalendar[0]),
+            // const BodyText(text: japaneseCalendar),
             const Text(
               'You have pushed the button this many times:',
             ),
