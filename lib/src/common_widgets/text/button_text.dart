@@ -3,8 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:japanese_calendar/src/theme/colors.dart';
 
 double defaultFontSize = 16;
-// double letterSpacing = fontSize * 1.2;
-// double lineHeight = fontSize * 1.3;
 
 class ButtonText extends StatelessWidget {
   final String text;
@@ -17,7 +15,7 @@ class ButtonText extends StatelessWidget {
     if (color != null) {
       return Color(color!);
     } else {
-      return Color(AppColors.text);
+      return Color(AppColors.textWhite);
     }
   }
 

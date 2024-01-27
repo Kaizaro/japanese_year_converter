@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:japanese_calendar/src/common_widgets/text/button_text.dart';
+import 'package:japanese_calendar/src/theme/colors.dart';
+
+// ignore: constant_identifier_names
+const String HARDCODED_buttonTitle = 'Press me';
 
 class PrimaryButton extends StatelessWidget {
-  const PrimaryButton({Key? key, this.buttonTitle = '', this.isLoading = false, this.onPressed})
+  const PrimaryButton(
+      {Key? key,
+      this.buttonTitle = HARDCODED_buttonTitle,
+      this.isLoading = false,
+      this.onPressed})
       : super(key: key);
 
   final String buttonTitle;
@@ -10,9 +19,27 @@ class PrimaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FilledButton(
-      onPressed: onPressed,
-      child: Text(buttonTitle),
+    return Row(
+      children: [
+        Expanded(
+          child: FilledButton(
+            onPressed: onPressed,
+            style: FilledButton.styleFrom(
+              backgroundColor: Color(AppColors.buttonPrimary),
+              foregroundColor: Color(AppColors.buttonPrimaryPressed),
+              disabledBackgroundColor: Color(AppColors.buttonPrimaryDisabled),
+              disabledForegroundColor: Color(AppColors.buttonPrimaryDisabled),
+              surfaceTintColor: Color(AppColors.buttonPrimaryPressed),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 12),
+              alignment: Alignment.center,
+            ),
+            child: ButtonText(text: buttonTitle),
+          ),
+        ),
+      ],
     );
   }
 }
