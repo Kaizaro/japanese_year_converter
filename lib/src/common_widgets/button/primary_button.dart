@@ -36,7 +36,7 @@ class PrimaryButton extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 12),
               alignment: Alignment.center,
             ),
-            child: ButtonText(text: buttonTitle),
+            child: isLoading ? CircularProgressIndicator(color: Color(AppColors.textWhite)) : ButtonText(text: buttonTitle),
           ),
         ),
       ],
