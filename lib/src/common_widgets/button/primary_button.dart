@@ -33,7 +33,7 @@ class PrimaryButton extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
-              padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 12),
+              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
               alignment: Alignment.center,
             ),
             child: isLoading ? CircularProgressIndicator(color: Color(AppColors.textWhite)) : ButtonText(text: buttonTitle),
